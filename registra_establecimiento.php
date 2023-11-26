@@ -46,13 +46,13 @@
     <div class="col">
       <div class="input-field mt-5 mb-5"> <span class="far  p-2"></span> <input name="nombre" type="text"  placeholder="Nombre Del Establecimiento:" > </div>
 
-      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="ubicacion" type="text"  placeholder="Lugar Del Establecimiento:" > </div>
+      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="lugar" type="text"  placeholder="Lugar Del Establecimiento:" > </div>
 
       <div class="input-field mt-5 mb-5"> <span class="far my-4 mb-4 p-2"></span> <input name="descripcion" type="text"  placeholder="Descripcion Del Establecimiento:"> </div>
     </div>
     
     <div class="col">
-      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="tipo_servico" type="text"  placeholder="Tipo De servico que ofrece:" > </div>
+      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="servico" type="text"  placeholder="Tipo De servico que ofrece:" > </div>
 
       <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="horarios" type="text"  placeholder="Horarios:" > </div>
     </div>
