@@ -67,38 +67,7 @@
                                         </div> <button class="btn btn-block text-center my-3" type="submit">Iniciar Sesion</button>
                                         <div class="text-center pt-3 text-muted">¿No tienes una cuenta aún? <a href="/registarse.php">Registrarse</a></div>
                                         <?php
-session_start();
-if (isset($_POST['login'])) {
-    require_once './dbconexion.php';
-    $username = $_POST['usuario'];
-    $contra = $_POST['contra'];
-    $query = $cnnPDO->prepare('SELECT * from usuarios WHERE username=:username and password=:contra');
-    $query->bindParam(':username', $username);
-    $query->bindParam(':contra', $contra);
-    $query->execute();
-    $count = $query->rowCount();
-    $campo = $query->fetch();
-    if ($count) {
-        $_SESSION['nombre'] = $campo['nombre'];
-        $_SESSION['username'] = $campo['username'];
-        $_SESSION['email'] = $campo['email'];
-        $_SESSION['imagen'] = $campo['Imagen'];
-        $_SESSION['contra'] = $campo['password'];
-        $_SESSION['act'] = $campo['activo'];
-        if ($username == 'admin') {
-            header("location: admini.php");
-            exit();
-        } else {
-            header("location: misecion.php");
-            exit();
-        }
-    } else {
-        echo "
-        <div class='alert alert-danger' role='alert'>
-          <b>El Usuario o el Password Son Incorrectos</b>
-        </div>";
-    }
-}
+
 ?>
 
                                       </form> 
