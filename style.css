@@ -180,6 +180,8 @@ a:hover {
   max-height: 60%;
   height: auto;
   margin-top: 40px; 
+    max-width: 100%;
+    height: auto;
 }
 
 

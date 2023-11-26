@@ -20,26 +20,15 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="./index.php">
             <img class="icon_logo" width="32" height="32" src="https://img.icons8.com/windows/32/000000/baby-calendar.png" alt="baby-calendar"/>
-                    CitaManager
+            CitaManager
         </a>
               
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-        
-            <button type="button" class="btn btn-outline-secondary">Ver perfil</button>
-            <button type="button" class="btn btn-outline-danger">cerrar sesion</button>
-
+        <div class="collapse navbar-collapse justify-content-end">
+            <button type="button" class="btn btn-outline-secondary me-2">Ver perfil</button>
+            <button type="button" class="btn btn-outline-danger">Cerrar sesión</button>
         </div>
     </div>
-</nav> 
-
-    <style>
-        .circular-image {
-            border-radius: 50%;
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-
+</nav>
 
     <div class="container mt-5 mb-9 d-flex flex-column justify-content-center align-items-center">
         <div style="text-align: center;" class="row">

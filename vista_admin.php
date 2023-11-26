@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Raleway:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./style.css">
-        <title>Document</title>
+        <title>Cliente</title>
 </head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <body>
@@ -20,41 +20,60 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="./index.php">
             <img class="icon_logo" width="32" height="32" src="https://img.icons8.com/windows/32/000000/baby-calendar.png" alt="baby-calendar"/>
-                    CitaManager
+            CitaManager
         </a>
               
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="">Bienvenido</a>
-                </li>
-                
-            </ul>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Ver perfil
-                </button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <button type="button" class="btn btn-outline-secondary me-2">Ver perfil</button>
+            <button type="button" class="btn btn-outline-danger">Cerrar sesión</button>
         </div>
     </div>
-</nav> 
+</nav>
 
-<div style="align-items: center;" class="container mt-5 mt-5 d-flex flex-column justify-content-center align-items-center">
-  <div style="text-align: center;" class="row">
-    <div class="col-md-4">
-      <img src="./images/todos_los_usuarios.jfif" alt="sector salud" class="img-top circular-image">
-      <h5>Todos los usuarios</h5>
-      <button class="btn btn-dark">Agendar cita</button>
+
+<div class="container mt-5 mb-9 d-flex flex-column align-items-center">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <img src="./images/todos_los_usuarios.webp" alt="sector salud" class="img-top circular-image">
+            <h5>Usuarios Totales</h5>
+            <button class="btn btn-dark mt-5 mb-2">Ver Usuarios</button>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img src="./images/usuarios_que_agendaron.webp" alt="restaurantes" class="img-top circular-image">
+            <h5>Citas Que Se Agendaron</h5>
+            <button class="btn btn-dark mt-1 mb-1">Ver Citas</button>
+        </div>
     </div>
+</div>
 
-    <div class="col-md-1">
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
 
-    <div class="col-md-4">
-      <img src="./images/usuarios_que_agendaron.jfif" alt="restaurantes" class="img-top circular-image">
-      <h5>Usuarios que agendaron cita</h5>
-      <button  class="btn btn-dark">Agendar citas</button>
+
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
+
+<?php
+    include('./footer.php');
+?>
 
 </body>
 </html>
