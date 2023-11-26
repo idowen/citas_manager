@@ -131,9 +131,7 @@ if (isset($_POST['registrar'])) {
                         <strong>Usuario Registrado.</strong> Te has registrado.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>';
-
-                        header("Location: ");
-                        exit();
+                        
                     } else {
                         echo "Error al ejecutar la consulta de inserción.";
                     }
