@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +24,14 @@
             <img class="icon_logo" width="32" height="32" src="https://img.icons8.com/windows/32/000000/baby-calendar.png" alt="baby-calendar"/>
             CitaManager
         </a>
-              
+        
+        <div class="text-white">
+            <h3><?php echo $_SESSION['usuario']; ?></h3>
+        </div>
+        <div class="text-white">
+            <h3><?php echo $_SESSION['correo']; ?></h3>
+        </div>
+
         <div class="collapse navbar-collapse justify-content-end">
             <button type="button" class="btn btn-outline-secondary me-2">Ver perfil</button>
             <button type="button" class="btn btn-outline-danger">Cerrar sesión</button>

@@ -17,10 +17,10 @@ if (isset($_POST['login'])) {
         $_SESSION['telefono'] = $campo['telefono'];
         $_SESSION['contrasena'] = $campo['contrasena']; 
         if ($username == 'admin') {
-            header("location: vista_admin.php");
+            header("location: ./vista_admin.php");
             exit();
         } else {
-            header("location: vista_cliente.php");
+            header("location: ./vista_cliente.php");
             exit();
         }
     } else {
