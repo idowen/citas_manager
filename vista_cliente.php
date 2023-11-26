@@ -41,22 +41,22 @@
     </style>
 
 
-    <div class="container mt-5 mt-4 d-flex flex-column justify-content-center align-items-center">
+    <div class="container mt-5 mb-9 d-flex flex-column justify-content-center align-items-center">
         <div style="text-align: center;" class="row">
             <div class="col-md-4">
-                <img src="./images/sector_salud.jpg" alt="sector salud" class="img-top circular-image">
+                <img src="./images/sector_salud.webp" alt="sector salud" class="img-top circular-image">
                     <h5>Sector Salud</h5>
                         <button class="btn btn-dark">Agendar cita</button>
             </div>
 
             <div class="col-md-4">
-                <img src="./images/barber.jpg" alt="estilistas" class="img-top circular-image">
+                <img src="./images/barber.webp" alt="estilistas" class="img-top circular-image">
                     <h5>Barber's Y Estilistas</h5>
                             <button class="btn btn-dark">Agendar Cita</button>
             </div>
 
             <div class="col-md-4">
-                <img src="./images/restaurantes.jpg" alt="restaurantes" class="img-top circular-image">
+                <img src="./images/restaurantes.webp" alt="restaurantes" class="img-top circular-image">
                     <h5>Restaurantes</h5>
                             <button class="btn btn-dark">Agendar citas</button>
                     </div>
@@ -82,6 +82,10 @@
     </div>
   </div>
 </div>
+
+<?php
+    include('./footer.php');
+?>
 
 </body>
 </html>

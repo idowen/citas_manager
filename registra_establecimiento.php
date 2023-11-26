@@ -34,18 +34,31 @@
 <div class="box_registro_establecimiento">
 <div class="container">
   <div class="row">
+
     <div class="col">
-    <form>
-        <label  for="imagen">Selecciona una imagen:</label>
-        <input type="file" id="imagen" name="imagen">
-    </form>
+        <form >
+            <label for="imagen"><h3>Sube la imagen de tu establecimiento.</h3></label>
+              <img src="./images/establecimiento.webp" alt="">
+                <input type="file" id="imagen" name="imagen">
+        </form>
     </div>
+
     <div class="col">
-      Column
+      <div class="input-field mt-5 mb-5"> <span class="far  p-2"></span> <input name="nombre" type="text"  placeholder="Nombre Del Establecimiento:" > </div>
+
+      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="ubicacion" type="text"  placeholder="Lugar Del Establecimiento:" > </div>
+
+      <div class="input-field mt-5 mb-5"> <span class="far my-4 mb-4 p-2"></span> <input name="descripcion" type="text"  placeholder="Descripcion Del Establecimiento:"> </div>
     </div>
+    
     <div class="col">
-      Column
+      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="tipo_servico" type="text"  placeholder="Tipo De servico que ofrece:" > </div>
+
+      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="horarios" type="text"  placeholder="Horarios:" > </div>
     </div>
+
+    <div class="d-flex align-items-start">
+        </div> <button class="btn btn-block text-center my-3" name="registrar" type="submit">Guardar</button>
   </div>
 </div>
 </div>
