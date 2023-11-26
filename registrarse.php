@@ -87,7 +87,6 @@ if (isset($_POST['registrar'])) {
     $telefono = $_POST['telefono'];
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
-    
 
     if (!empty($nombre) && !empty($apellido) && !empty($correo) && !empty($telefono) && !empty($usuario) && !empty($contrasena)) {
         try {
@@ -127,6 +126,7 @@ if (isset($_POST['registrar'])) {
                     $sql->bindParam(':usuario', $usuario);
                     $sql->bindParam(':contrasena', $contrasena);
 
+
                     if ($sql->execute()) {
                         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         <strong>Usuario Registrado.</strong> Te has registrado.
@@ -152,6 +152,8 @@ unset($cnnPDO);
                                 <div class="">
                             </div>
 </div>
+
+
 
 
 <?php
