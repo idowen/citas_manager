@@ -59,11 +59,11 @@
 
       <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="correo" type="text"  placeholder="Correo:" > </div>
 
-      <div class="input-field mt-5 mb-5"> <span class="far p-2"></span> <input name="Telefono" type="text"  placeholder="Telefono:" > </div>
+      <div class="input-field mt-5 mb-2"> <span class="far p-2"></span> <input name="Telefono" type="text"  placeholder="Telefono:" > </div>
     </div>
 
     <div class="d-flex align-items-start">
-        </div> <button class="btn btn-block text-center my-3" name="registrar" type="submit">Guardar</button>
+        </div> <button class="btn btn-block text-center my-1" name="registrar" type="submit">Guardar</button>
   </div>
 </div>
 </div>
