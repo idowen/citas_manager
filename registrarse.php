@@ -76,7 +76,7 @@
                                     
                                     <div class="text-center pt-1 text-muted">¿Ya tienes cuenta?<a href="./index.php">Iniciar Sesion</a></div>
 
-                                   <?php
+                                    <?php
 require_once './dbconexion.php';
 
 # Inicia Código de REGISTRAR
@@ -117,7 +117,7 @@ if (isset($_POST['registrar'])) {
                     </div>';
                 } else {
                     // Inserta el nuevo usuario
-                    $sql = $cnnPDO->prepare("INSERT INTO usuarios_reg (nombre, apellido, correo, telefono, usuario, contrasena, activo) VALUES (:nombre, :apellido, :correo, :telefono, :usuario, :contrasena, :activo)");
+                    $sql = $cnnPDO->prepare("INSERT INTO usuarios_reg (nombre, apellido, correo, telefono, usuario, contrasena) VALUES (:nombre, :apellido, :correo, :telefono, :usuario, :contrasena)");
 
                     $sql->bindParam(':nombre', $nombre);
                     $sql->bindParam(':apellido', $apellido);
@@ -126,13 +126,16 @@ if (isset($_POST['registrar'])) {
                     $sql->bindParam(':usuario', $usuario);
                     $sql->bindParam(':contrasena', $contrasena);
 
-
                     if ($sql->execute()) {
                         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         <strong>Usuario Registrado.</strong> Te has registrado.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>';
 
+                        header("Location: ");
+                        exit();
+                    } else {
+                        echo "Error al ejecutar la consulta de inserción.";
                     }
                 }
             }
@@ -144,6 +147,10 @@ if (isset($_POST['registrar'])) {
 
 unset($cnnPDO);
 ?>
+
+<!-- Resto de tu código HTML -->
+
+
 
                                     </form> 
                                 </div>
