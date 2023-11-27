@@ -32,13 +32,18 @@
             </a>
               
               <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                              <a class="nav-link" href="#">Inicia Sesión</a>
+                    <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+               
+                        <li class="nav-item"  type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <a class="nav-link" href="./inicio_sesion.php">Inicia Sesión</a>
                         </li>
-                  </ul>
+                        
+            </ul>
+                    </div>
               </div>
         </div>
+
 </nav>   
 
 <div class="box_registro">
@@ -80,6 +85,7 @@
 require_once './dbconexion.php';
 
 # Inicia Código de REGISTRAR
+
 if (isset($_POST['registrar'])) {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
@@ -87,6 +93,7 @@ if (isset($_POST['registrar'])) {
     $telefono = $_POST['telefono'];
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
+    $codigo_secreto = $_POST['codigo_secreto']; // Agrega este campo al formulario
 
     if (!empty($nombre) && !empty($apellido) && !empty($correo) && !empty($telefono) && !empty($usuario) && !empty($contrasena)) {
         try {
@@ -99,7 +106,7 @@ if (isset($_POST['registrar'])) {
 
             if ($resultsCorreo) {
                 echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Ups! El correo electronico ya existe.</strong> Prueba con otro.
+                <strong>Ups! El correo electrónico ya existe.</strong> Prueba con otro.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
             } else {
@@ -117,7 +124,7 @@ if (isset($_POST['registrar'])) {
                     </div>';
                 } else {
                     // Inserta el nuevo usuario
-                    $sql = $cnnPDO->prepare("INSERT INTO usuarios_reg (nombre, apellido, correo, telefono, usuario, contrasena) VALUES (:nombre, :apellido, :correo, :telefono, :usuario, :contrasena)");
+                    $sql = $cnnPDO->prepare("INSERT INTO usuarios_reg (nombre, apellido, correo, telefono, usuario, contrasena, rol) VALUES (:nombre, :apellido, :correo, :telefono, :usuario, :contrasena, :rol)");
 
                     $sql->bindParam(':nombre', $nombre);
                     $sql->bindParam(':apellido', $apellido);
@@ -125,6 +132,16 @@ if (isset($_POST['registrar'])) {
                     $sql->bindParam(':telefono', $telefono);
                     $sql->bindParam(':usuario', $usuario);
                     $sql->bindParam(':contrasena', $contrasena);
+
+                    // Establece el rol según el código secreto y/o la selección del formulario
+                    $rol = 'cliente';
+                    if ($codigo_secreto === 'codigo_secreto_admin') {
+                        $rol = 'admin';
+                    } elseif ($_POST['rol'] === 'dueño') {
+                        $rol = 'dueño';
+                    }
+
+                    $sql->bindParam(':rol', $rol);
 
                     if ($sql->execute()) {
                         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -145,6 +162,7 @@ if (isset($_POST['registrar'])) {
 
 unset($cnnPDO);
 ?>
+
 
 <!-- Resto de tu código HTML -->
 

@@ -30,7 +30,7 @@
                     <a class="nav-link" href="./registrarse.php">¿Tienes un establecimiento?</a>
                 </li>
                 <li class="nav-item"  type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <a class="nav-link" href="">Inicia Sesión</a>
+                    <a class="nav-link" href="./inicio_sesion.php">Inicia Sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./registrarse.php">Registrarse</a>
@@ -44,9 +44,7 @@
         </div>
 </nav>    
 
-<?php
-    include('./modal_inicio.php');
-?>
+
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
