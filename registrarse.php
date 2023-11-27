@@ -30,7 +30,7 @@
                 <img class="icon_logo" width="32" height="32" src="https://img.icons8.com/windows/32/000000/baby-calendar.png" alt="baby-calendar"/>
                     CitaManager
             </a>
-              
+            
               <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">

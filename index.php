@@ -24,7 +24,7 @@
                     CitaManager
             </a>
               
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
                     <a class="nav-link" href="./registrarse.php">¿Tienes un establecimiento?</a>
@@ -35,11 +35,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./registrarse.php">Registrarse</a>
                 </li>
-                
+                    <li class="nav-item">
+                      <a class="nav-link" href="./inicio_sesion.php">Agendar Cita.</a>
+                    </li>
             </ul>
-            <button  type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Agendar Cita
-          </button>
           </div>
         </div>
 </nav>    
